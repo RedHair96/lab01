@@ -1,0 +1,23 @@
+{
+  "name": "lab01",
+  "version": "0.0.1",
+  "description": "photos online web",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedHair96/lab01.git"
+  },
+  "author": "Phan Thuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RedHair96/lab01/issues"
+  },
+  "homepage": "https://github.com/RedHair96/lab01#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
