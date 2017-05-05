@@ -1,0 +1,20 @@
+{
+  "name": "lab01",
+  "description": "photos online web",
+  "main": "index.js",
+  "authors": [
+    "Phan Thuan"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/RedHair96/lab01",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "boostrap#^3.3.7"
+  }
+}
