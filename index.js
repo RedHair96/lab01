@@ -6,7 +6,8 @@ app.use(express.static("public"));
 app.use(express.static("bower_components"));
 
 app.engine('hbs', exphbs({
-  extname : '.hbs'
+  extname : '.hbs',
+  defaultLayout: 'application'
 }));
 app.set('view engine', 'hbs');
 
@@ -15,7 +16,6 @@ app.get('/home', function (req, res) {
       home: true,
       title: 'HBS index page',
       message: 'Hello homepage',
-      layout: 'application'
     });
 });
 
@@ -35,21 +35,18 @@ app.get('/albums', function (req, res) {
         pictures: 5,
         views: 208
       }
-      //["phanthuan.html", "image/PhanThuan/1.jpg", "Phan Hữu Thuận", 5, 38],
-      //["thanhtram.html", "image/ThanhTram/2.jpg", "Trần Ngọc Thanh Trâm", 5, 108]
     ]
     res.render('albums', {
       albums: albums,
-      layout: 'application'
     });
 });
 
 app.get('/about', function (req, res) {
-    res.render('about', {about: true, layout: 'application'});
+    res.render('about', {about: true});
 });
 
 app.get('/blog', function (req, res) {
-    res.render('blog', {blog: true, message: 'Blog here!',layout: 'application'});
+    res.render('blog', {blog: true, message: 'Blog here!'});
 });
 
 app.listen(2707);
