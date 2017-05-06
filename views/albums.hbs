@@ -1,13 +1,4 @@
 
 {{#each albums}}
-  <div class="col-6 col-sm-4 col-lg-2">
-    <a href= {{link}}><img src= {{image}} class="img-rounded avatar" alt="1412538"></a>
-    <span>
-           Người đăng: <b>{{name}}</b>
-           <br>
-           Số lượng ảnh: {{pictures}}
-           <br>
-           Số lượng view: {{views}} <span class="glyphicon glyphicon-eye-open"></span>
-    </span>
-  </div>
+  {{>albums-cover}}
 {{/each}}

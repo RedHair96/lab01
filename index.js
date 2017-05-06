@@ -7,7 +7,9 @@ app.use(express.static("bower_components"));
 
 app.engine('hbs', exphbs({
   extname : '.hbs',
-  defaultLayout: 'application'
+  defaultLayout: 'application',
+  layoutsDir: 'views/special-layouts/',
+  partialsDir: 'views/special-partials/'
 }));
 app.set('view engine', 'hbs');
 
