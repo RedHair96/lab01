@@ -5,11 +5,18 @@ var exphbs  = require('express-handlebars');
 app.use(express.static("public"));
 app.use(express.static("bower_components"));
 
-app.engine('hbs', exphbs({}));
+app.engine('hbs', exphbs({
+  extname : '.hbs'
+}));
 app.set('view engine', 'hbs');
 
 app.get('/home', function (req, res) {
-    res.render('index', {title: 'HBS index page', message: 'Hello homepage'});
+    res.render('index', {
+      home: true,
+      title: 'HBS index page',
+      message: 'Hello homepage',
+      layout: 'application'
+    });
 });
 
 app.get('/albums', function (req, res) {
@@ -31,15 +38,18 @@ app.get('/albums', function (req, res) {
       //["phanthuan.html", "image/PhanThuan/1.jpg", "Phan Hữu Thuận", 5, 38],
       //["thanhtram.html", "image/ThanhTram/2.jpg", "Trần Ngọc Thanh Trâm", 5, 108]
     ]
-    res.render('albums', {albums: albums});
+    res.render('albums', {
+      albums: albums,
+      layout: 'application'
+    });
 });
 
 app.get('/about', function (req, res) {
-    res.render('about', {});
+    res.render('about', {about: true, layout: 'application'});
 });
 
 app.get('/blog', function (req, res) {
-    res.render('blog', {});
+    res.render('blog', {blog: true, message: 'Blog here!',layout: 'application'});
 });
 
 app.listen(2707);
