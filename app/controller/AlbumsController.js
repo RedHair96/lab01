@@ -10,7 +10,7 @@ var albumsController = {
         userList.push(users[i]);
       }
     }
-    res.render('albums', {
+    res.render('albums/index', {
       title: 'ALBUM',
       users: userList,
       page: 'albums',

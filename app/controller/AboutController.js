@@ -1,7 +1,7 @@
 // about-controller
 var aboutController = {
   index: function(req, res) {
-    res.render('about', {
+    res.render('about/index', {
       title: 'ABOUT',
       page: 'about'
     });

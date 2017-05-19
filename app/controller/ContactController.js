@@ -4,7 +4,7 @@ function isEmpty(str) {
 }
 var contactController = {
   index: function(req, res) {
-    res.render('contact', {
+    res.render('contact/index', {
       title: 'CONTACT',
       page: 'contact',
       typeAlert: 'alert alert-info',
@@ -19,7 +19,7 @@ var contactController = {
       typeAlert = "alert alert-danger";
       message = 'Enter your name, please!'
     }
-    res.render('contact', {
+    res.render('contact/index', {
       title: 'CONTACT',
       page: 'contact',
       typeAlert: typeAlert,
